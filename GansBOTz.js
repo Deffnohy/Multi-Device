@@ -3525,7 +3525,6 @@ case 'smeme': case 'stickermeme': case 'stickmeme': {
 if (isBanChat) return reply(mess.banChat)
 let { TelegraPh } = require('./lib/uploader')
 if (!text) return reply(`Send/Reply Photo With Caption ${prefix + command} *text*`)
-if (text.includes('|')) return reply(`Kirim/Balas Foto Dengan Caption ${prefix + command} *text*`)
 if (!/image/.test(mime)) return reply(`Kirim/Balas Foto Dengan Caption ${prefix + command} *text*`)
 reply(mess.wait)
 mee = await Gans.downloadAndSaveMediaMessage(quoted)
